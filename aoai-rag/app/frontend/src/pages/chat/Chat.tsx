@@ -312,7 +312,7 @@ const Chat = () => {
                     <Checkbox
                         className={styles.chatSettingsSeparator}
                         checked={useSemanticRanker}
-                        label="검색에 시맨틱 랭커 사용"
+                        label="검색에 의미 체계 순위 지정 사용"
                         onChange={onUseSemanticRankerChange}
                     />
                     <Checkbox
@@ -332,7 +332,7 @@ const Chat = () => {
                         className={styles.chatSettingsSeparator}
                         label="검색 모드"
                         options={[
-                            { key: "hybrid", text: "Vectors + Text (Hybrid)", selected: retrievalMode == RetrievalMode.Hybrid, data: RetrievalMode.Hybrid },
+                            { key: "hybrid", text: "Vectors + Text(Hybrid)", selected: retrievalMode == RetrievalMode.Hybrid, data: RetrievalMode.Hybrid },
                             { key: "vectors", text: "Vectors", selected: retrievalMode == RetrievalMode.Vectors, data: RetrievalMode.Vectors },
                             { key: "text", text: "Text", selected: retrievalMode == RetrievalMode.Text, data: RetrievalMode.Text }
                         ]}

@@ -26,7 +26,7 @@ async def search():
     datetime = request.args.get("datetime")
     logging.info(query, datetime)
 
-    list_rest = [{"cafename": "カフェかば殿", "2023/07/01 18:00-19:00": "空き"}]
+    list_rest = [{"cafename": "The black tea", "2023/07/01 18:00-19:00": "비어있음"}]
 
     list_search = list(filter(lambda item : item['cafename'] == query, list_rest))
     dict_search = {"Cafe not found"}

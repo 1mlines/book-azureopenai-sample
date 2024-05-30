@@ -55,11 +55,11 @@
 - Azure App Service: Basic Tier, 1CPU 코어, 1.75GB RAM. 1시간당 [가격](https://azure.microsoft.com/pricing/details/app-service/linux/)
 - Azure OpenAI: Standard Tier, ChatGPT, Ada 모델. 사용된 토큰 1,000개당 가격이 책정되며 질문당 최소 1K의 토큰을 사용합니다. [가격](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/)
 - Form Recognizer: S0(Standard) Tier는 사전에 구축된 레이아웃을 사용합니다. 문서당 과금되는 구조입니다. [가격](https://azure.microsoft.com/pricing/details/form-recognizer/)
-- Azure AI Search: Basic Tier, 1개의 복제본, 시맨틱 검색은 월 1,000개까지 무료. 1시간당 [가격](https://azure.microsoft.com/pricing/details/search/)
+- Azure AI Search: Basic Tier, 1개의 복제본, 의미 체계 검색은 월 1,000개까지 무료. 1시간당 [가격](https://azure.microsoft.com/pricing/details/search/)
 - Azure Blob Storage: Standard Tier LRS(지역 다중화). 스토리지 및 읽기 작업 당 과금。[가격](https://azure.microsoft.com/pricing/details/storage/blobs/)
 - Azure Monitor: 종량제 과금. 비용은 수집된 데이터에 기반하여 책정됩니다. [가격](https://azure.microsoft.com/pricing/details/monitor/)
 
-비용 절감을 위해 `infra` 폴더 하위에 있는 매개 변수 파일을 변경하면 Azure App Service, Azure AI Search, Form Recognizer의 무료 SKU로 변경할 수 있습니다. 무료 AI Search 리소스는 구독당 1개까지만 사용할 수 있으며, 무료 Form Recognizer 리소스는 각 문서에서 처음 두 페이지만 분석합니다. 또, `data` 폴더의 문서수를 줄이거나 `prepdocs.py` 스크립트를 실행하는 `azure.yaml`의 postprovision 훅을 제거하면 Form Recognizer 비용을 줄일 수 있습니다.
+비용 절감을 위해 `infra` 폴더 하위에 있는 매개 변수 파일을 변경하면 Azure App Service, Azure AI Search, Form Recognizer를 무료 SKU로 변경할 수 있습니다. 무료 AI Search 리소스는 구독당 1개까지만 사용할 수 있으며, 무료 Form Recognizer 리소스는 각 문서에서 처음 두 페이지만 분석합니다. 또, `data` 폴더의 문서수를 줄이거나 `prepdocs.py` 스크립트를 실행하는 `azure.yaml`의 postprovision 훅을 제거하면 Form Recognizer 비용을 줄일 수 있습니다.
 
 ⚠️ 더 이상 앱을 사용하지 않으면 불필요한 비용을 지출하지 않기 위해 잊지 말고 앱을 삭제해주세요. 애저 포탈에서 리소스 그룹을 삭제하거나, `azd down`을 실행하면 됩니다.
 
@@ -144,7 +144,7 @@ URL은 다음과 같이 나타납니다.
 
 웹앱에 접속하면:
 
-* 채팅 혹은 Q&A로 다양한 주제를 경험해보세요. 채팅으로 후속 질문이나 보다 명확한 설명을 요청할 수 있습니다. 또, 답변 요약을 부탁하거나 보다 자세한 설명을 요청해보세요.
+* 채팅 혹은 문답으로 다양한 주제를 경험해보세요. 채팅으로 후속 질문이나 보다 명확한 설명을 요청할 수 있습니다. 또, 답변 요약을 부탁하거나 보다 자세한 설명을 요청해보세요.
 * 인용 및 출처를 탐색할 수 있습니다.
 * '설정'을 클릭해서 다양한 옵션을 활용하고 프롬프트를 조정할 수 있습니다.
 
@@ -223,7 +223,7 @@ https://github.com/Microsoft/sample-app-aoai-chatGPT/
 [Azure OpenAI Service 모델](https://aka.ms/oai/models)을 참고해주세요.
 
 3. 서비스 할당량(리전별 리소스 수)이 초과된 상태입니다.
-서비스 할당량 및 제한을 다룬 [문서](https://learn.microsoft.com/ja-jp/azure/ai-services/openai/quotas-limits)를 참고해주세요.
+서비스 할당량 및 제한을 다룬 [문서](https://learn.microsoft.com/ko-kr/azure/ai-services/openai/quotas-limits)를 참고해주세요.
 
 4. "하위 도메인 이름이 이미 사용중입니다. 다른 이름을 선택하세요."라는 오류가 발생합니다. 매번 예제를 실행하고나서 리소스를 삭제했는데 계속 같은 오류가 발생합니다.
 애저는 리소스를 삭제하면 48시간 동안 같은 이름으로 다른 리소스를 만들 수 없습니다. [삭제된 리소스 제거](https://learn.microsoft.com/azure/cognitive-services/manage-resources?tabs=azure-portal#purge-a-deleted-resource)를 참고해주세요.

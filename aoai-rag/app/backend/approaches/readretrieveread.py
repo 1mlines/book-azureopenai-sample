@@ -102,7 +102,7 @@ class ReadRetrieveReadApproach(AskApproach):
             Tool(name="PeopleSearchTool",
                 func=retrieve_and_store,
                 coroutine=retrieve_and_store,
-                description="한국사 인물 정보 검색에 유용합니다. 사용자의 질문으로부터 검색 쿼리를 생성해서 검색을 수행합니다. 쿼리는 문자열만 받습니다."
+                description="한국사 인물 정보를 편리하게 검색할 수 있습니다. 사용자의 질문으로부터 검색 쿼리를 생성해서 검색을 수행합니다. 쿼리는 문자열만 받습니다."
                 ),
             CafeSearchTool()
         ]
@@ -120,7 +120,7 @@ class ReadRetrieveReadApproach(AskApproach):
         agent_chain = initialize_agent(tools,
                                     llm,
                                     agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-                                    #agent=AgentType.OPENAI_FUNCTIONS,
+                                    # agent=AgentType.OPENAI_FUNCTIONS,
                                     verbose=True,
                                     agent_kwargs=dict(suffix=SUFFIX + prompt.SUFFIX),
                                     callback_manager = cb_manager,
@@ -143,7 +143,7 @@ class ReadRetrieveReadApproach(AskApproach):
 class CafeSearchTool(BaseTool):
     data: dict[str, str] = {}
     name = "CafeSearchTool"
-    description = "무인과 연고가 있는 카페를 검색할 때 유용합니다. 카페 검색 쿼리에는 무인의 **이름**만 입력해주세요."
+    description = "무신과 연고가 있는 카페를 검색할 때 유용합니다. 카페 검색 쿼리에는 무신의 **이름**만 입력해주세요."
 
     # Use the tool synchronously.
     def _run(self, query: str) -> str:

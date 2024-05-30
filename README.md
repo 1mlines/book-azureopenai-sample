@@ -64,7 +64,7 @@ brew tap azure/azd && brew install azd
 
 ### 4. Node.js 18 LTS 설치
 
-[Node.js 18 LTS](https://nodejs.org/ja/download)에서 LTS를 선택하고, 자신의 운영체제에 맞춰 설치를 진행합니다.
+[Node.js 18 LTS](https://nodejs.org/en/download)에서 LTS를 선택하고, 자신의 운영체제에 맞춰 설치를 진행합니다.
 
 ### 5. PowerShell 7 설치 (Windows 한정)
 
