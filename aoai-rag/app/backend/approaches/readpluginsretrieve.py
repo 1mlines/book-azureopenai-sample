@@ -51,7 +51,7 @@ class ReadPluginsRetrieve(AskApproach):
                                         agent_kwargs=dict(suffix=SUFFIX + prompt.SUFFIX),
                                         handle_parsing_errors=True,
                                         callback_manager = cb_manager,
-                                        max_iterations=5,
+                                        max_iterations=10,
                                         early_stopping_method="generate")
 
             #result = agent_chain.run(q)
