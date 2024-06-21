@@ -1,5 +1,5 @@
-// Azure API Managementのサブスクリプションキー、モデルやユーザごとに利用トークン数やAPI実行数を算出するクエリ
-// between (datetime("<開始日時>") .. datetime("<終了日時>")) を指定して実行してください
+// Azure API Management의 구독 키, 모델이나 사용자별로 이용한 토큰 수 혹은 API 실행횟수를 산출하는 쿼리
+// between (datetime("<시작일시>") .. datetime("<종료일시>"))를 지정하여 실행해야 합니다.
 ApiManagementGatewayLogs
 | where TimeGenerated between (datetime("2023-10-01T00:00:00") .. datetime("2023-10-29T23:59:59"))
   and OperationId in ('ChatCompletions_Create', 'completions_create', 'embeddings_create')
