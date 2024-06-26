@@ -1,6 +1,8 @@
 # musin-plugins-demo
 ChatGPT Plugins Demo
 
+> [!NOTE]   
+> [ChatGPT Plugins는 더 이상 지원되지 않습니다](https://help.openai.com/en/articles/8988022-winding-down-the-chatgpt-plugins-beta).  
 
 Get a todo list ChatGPT plugin up and running in under 5 minutes using Python. This plugin is designed to work in conjunction with the [ChatGPT plugins documentation](https://platform.openai.com/docs/plugins). If you do not already have plugin developer access, please [join the waitlist](https://openai.com/waitlist/plugins).
 
