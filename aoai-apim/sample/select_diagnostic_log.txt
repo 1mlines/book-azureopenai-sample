@@ -1,4 +1,4 @@
-// Azure API Management의 진단로그를 Log Analytics로 출력하기 위한 쿼리
-// between (datetime("<시작일시>") .. datetime("<종료일시>"))를 지정하여 실행해야 합니다.
+// Azure API Management의 진단 로그를 Log Analytics로 출력하기 위한 쿼리
+// between (datetime("<시작일시>") .. datetime("<종료일시>"))를 지정하여 실행해야 한다.
 ApiManagementGatewayLogs
-| where TimeGenerated between (datetime("2023-09-01T00:00:00") .. datetime("2023-09-30T23:59:59"))
+| where TimeGenerated between (datetime("2024-06-01T00:00:00") .. datetime("2024-06-30T23:59:59"))
