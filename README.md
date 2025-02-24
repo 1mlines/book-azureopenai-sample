@@ -1,15 +1,24 @@
 # book-azureopenai-sample
 
-Azure OpenAI Service로 시작하는 ChatGPT/LLM 시스템 구축 입문의 예제 코드 저장소입니다.
+![Image](https://github.com/user-attachments/assets/8d143a30-8728-4f7a-bb0b-05b4959bcd63)
 
-원서 링크: https://gihyo.jp/book/2024/978-4-297-13929-2  
+Azure OpenAI로 ChatGPT와 LLM 시스템 쉽고 빠르게 구축하기의 예제 코드 저장소입니다.
+
+Azure OpenAI와 Azure AI Foundry를 비롯해 애저의 다양한 AI 서비스들에 대한 정보를 유튜브 채널에서 공유할 예정입니다. 많은 관심 부탁드립니다.
+
+- Microsoft AI 한국 사용자 모임: https://www.youtube.com/@microsoftai.kruser
+
+## 구매 링크
+
+- 예스24: https://www.yes24.com/Product/Goods/142954291
+- 알라딘: https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358914912
+- 원서 링크: https://gihyo.jp/book/2024/978-4-297-13929-2
 
 ## 디렉토리 구성
 
 - [aoai-rag](./aoai-rag/): Azure OpenAI Service와 Azure AI Search를 활용해 사내 문서 검색(RAG) 시스템을 구현하는 예제 코드입니다. 5장에서 주로 사용하며 6장에서 ChatGPT 플러그인을 구현할 때에도 사용합니다. 또, 각각의 컴포넌트들을 더 깊게 이해할 수 있도록 단계적으로 작성한 노트북을 제공합니다.([aoai-rag/notebooks](aoai-rag/notebooks))
 - [aoai-flask-see](./aoai-flask-sse/): Azure OpenAI Service의 스트리밍 처리를 Flask와 SSE(Server-Sent Events)를 활용해서 구현하는 예제 코드입니다. 8장에서 사용합니다.
 - [aoai-apim](./aoai-apim/): Azure API Management를 활용해서 Azure OpenAI Service를 사내 공통 시스템으로 사용하는 예제 코드입니다. 9장에서 사용합니다.
-
 
 ## 환경설정
 
