@@ -11,6 +11,7 @@ Azure OpenAI와 Azure AI Foundry를 비롯해 애저의 다양한 AI 서비스�
 ## 구매 링크
 
 - 예스24: https://www.yes24.com/Product/Goods/142954291
+- 교보문고: https://product.kyobobook.co.kr/detail/S000215851003
 - 알라딘: https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358914912
 - 원서 링크: https://gihyo.jp/book/2024/978-4-297-13929-2
 
